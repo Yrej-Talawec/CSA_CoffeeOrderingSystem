@@ -1,0 +1,41 @@
+This Coffee Ordering System should have the following:
+
+Menu Section
+Coffee Name
+Offered Sizes (small, medium, large)
+Offered Temperature (hot, cold)
+Possible add ons along with the quantity and additional fees
+Respective prices (for size, temperature)
+
+(Only available on specific dates)
+Special (Seasonal) Menu Section
+Special Coffee Name
+Offered Sizes (small, medium, large)
+Offered Temperature (hot, cold)
+Possible add ons along with the quantity and additional fees
+Respective prices (for size, temperature)
+
+Order Section
+Customer Name (To call, pick-up)
+Order Details (coffee name and its respective temperature and size (if applicable, its respective add ons)
+Quantity per order
+If applicable: quantity per add ons
+Total of the order/s
+
+Breakdown (Can be Reciept)
+Name of the shop
+Date and Time
+Served By: (Employee Name)
+__________________________
+To be picked up by: (Customer Name)
+Order Detail (Format)
+Coffee Name (Temperature) - Size - Original Price x Quantity = Total
+(if applicable) Add on name - Quantity - Additional Fee = FinalTotal
+(To be repeated if there are many orders)
+Grand total of the order
+__________________________
+--------------------------
+Some motto or any good farewell 
+
+
+
