@@ -10,3 +10,18 @@ C:\Users\63938\Downloads\Computer Prog 3\MIDTERM ACT 2\CoffeeShop\CoffeeShop\obj
 C:\Users\63938\Downloads\Computer Prog 3\MIDTERM ACT 2\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.CustomerForm.resources
 C:\Users\63938\Downloads\Computer Prog 3\MIDTERM ACT 2\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.OrderForm.resources
 C:\Users\63938\Downloads\Computer Prog 3\MIDTERM ACT 2\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.SummaryForm.resources
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\bin\Debug\CoffeeShop.exe.config
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\bin\Debug\CoffeeShop.exe
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\bin\Debug\CoffeeShop.pdb
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.csproj.AssemblyReference.cache
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.exe.config
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.CustomerForm.resources
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.OrderForm.resources
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.SummaryForm.resources
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.Properties.Resources.resources
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.csproj.GenerateResource.cache
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.csproj.CoreCompileInputs.cache
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.exe
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.pdb
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.Form4.resources
+C:\Users\yrej\Desktop\YP\CSA_CoffeeOrderingSystem\CSA_CoffeeOrderingSystem\Yrej-Talawec\CSA_CoffeeOrderingSystem\CoffeeShop\CoffeeShop\obj\Debug\CoffeeShop.ADMINDB.resources

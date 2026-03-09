@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeShop", "CoffeeShop\CoffeeShop.csproj", "{BBF336CF-61D0-4EEA-B833-075079C3ED2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coffee Ordering", "..\..\..\..\..\another\laquiankarllouie\Coffee-Ordering-System\Coffee-Ordering-master\Coffee Ordering.csproj", "{D52E0C5C-847E-7A6F-4616-C02DD659BC3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BBF336CF-61D0-4EEA-B833-075079C3ED2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBF336CF-61D0-4EEA-B833-075079C3ED2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBF336CF-61D0-4EEA-B833-075079C3ED2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52E0C5C-847E-7A6F-4616-C02DD659BC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52E0C5C-847E-7A6F-4616-C02DD659BC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52E0C5C-847E-7A6F-4616-C02DD659BC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52E0C5C-847E-7A6F-4616-C02DD659BC3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

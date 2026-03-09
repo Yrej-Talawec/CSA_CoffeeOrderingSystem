@@ -40,6 +40,9 @@ namespace CoffeeShop
                 lblName.Text = $"Customer Name: {CustomerInfo.CustomerName}";
                 lblType.Text = $"Customer Type: {CustomerInfo.CustomerType}";
                 lblD.Text = $"Date: {CustomerInfo.DateStamp}";
+         Random rnd = new Random();
+                int number = rnd.Next(0001, 9999);
+                label4.Text = $"Order ID: {number}";
             }
 
             if (Orders != null)
@@ -83,6 +86,23 @@ namespace CoffeeShop
             {
                 this.Close();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CustomerForm form = new CustomerForm();
+            form.Show();
+            this.Hide();
         }
     }
 
