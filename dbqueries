@@ -1,0 +1,25 @@
+Pa copypaste na lang sa sql workbench or kung san kayo magdadatabase (Incomplete)
+
+< --- Beverages --->
+CREATE TABLE beverage_menu (
+  id int NOT NULL AUTO_INCREMENT,
+  bev_name varchar(100) NOT NULL,
+  category varchar(50) NOT NULL,
+  has_coffee tinyint(1) DEFAULT '1',
+  price decimal(10,2) DEFAULT '0.00',
+  created_at timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY name (bev_name)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+< --- Users --->
+  CREATE TABLE users (
+  user_id int NOT NULL AUTO_INCREMENT,
+  user_email varchar(50) NOT NULL,
+  user_password varchar(50) NOT NULL,
+  user_role enum('Admin','Barista') NOT NULL,
+  PRIMARY KEY (user_id),
+  UNIQUE KEY username_UNIQUE (user_email),
+  CONSTRAINT users_chk_1 CHECK ((user_role in (_utf8mb4'barista',_utf8mb4'admin'))),
+  CONSTRAINT users_chk_2 CHECK ((user_email like _utf8mb4'%@gmail.com'))
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
