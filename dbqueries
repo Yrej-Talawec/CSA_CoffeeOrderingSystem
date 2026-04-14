@@ -23,3 +23,13 @@ CREATE TABLE beverage_menu (
   CONSTRAINT users_chk_1 CHECK ((user_role in (_utf8mb4'barista',_utf8mb4'admin'))),
   CONSTRAINT users_chk_2 CHECK ((user_email like _utf8mb4'%@gmail.com'))
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+< --- Logs --->
+CREATE TABLE `logs` (
+  `IdLog` int NOT NULL AUTO_INCREMENT,
+  `CUserID` int NOT NULL,
+  `UAction` varchar(45) NOT NULL,
+  `ADescription` text NOT NULL,
+  `TimeCreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`IdLog`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
