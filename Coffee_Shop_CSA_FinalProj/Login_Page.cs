@@ -13,7 +13,7 @@ namespace Coffee_Shop_CSA_FinalProj
 {
     public partial class Login_Page : Form
     {
-        string connStr = "server=localhost;port=3306;user id=root;password=coffeeshop;database=coffee_shop_csa;";
+        string connStr = "server=localhost;port=3306;user id=root;password=*504487*;database=coffee_shop_csa;";
 
         public Login_Page()
         {
@@ -84,21 +84,24 @@ namespace Coffee_Shop_CSA_FinalProj
                     {
                         int userId = Convert.ToInt32(reader["user_id"]);
                         string userRole = reader["user_role"].ToString();
-                        reader.Close();
+                        reader.Close(); 
 
-                        using (MySqlConnection logConn = new MySqlConnection(connStr))
-                        {
-                            logConn.Open();
+                        //updated status in users when user logs in
+                        string updatestatusq = "UPDATE users SET status = 'Logged In' WHERE user_id = @id";
+                        MySqlCommand updateCmd = new MySqlCommand(updatestatusq, conn);
+                        updateCmd.Parameters.AddWithValue("@id", userId);
+                        updateCmd.ExecuteNonQuery();
 
-                            string logQuery = "INSERT INTO logs (CUserID, UAction, ADescription) VALUES (@id, @action, @desc)";
-                            MySqlCommand logCmd = new MySqlCommand(logQuery, logConn);
+                        //Log record
+                        string logQuery = "INSERT INTO logs (CUserID, UAction, ADescription) VALUES (@id, @action, @desc)";
+                        MySqlCommand logCmd = new MySqlCommand(logQuery, conn);
 
-                            logCmd.Parameters.AddWithValue("@id", userId);
-                            logCmd.Parameters.AddWithValue("@action", "Logged In");
-                            logCmd.Parameters.AddWithValue("@desc", "User logged in");
+                        logCmd.Parameters.AddWithValue("@id", userId);
+                        logCmd.Parameters.AddWithValue("@action", "Logged In");
+                        logCmd.Parameters.AddWithValue("@desc", userRole + " logged in");
 
-                            logCmd.ExecuteNonQuery();
-                        }
+                        logCmd.ExecuteNonQuery();
+
 
 
                         // 4. Role-Based Redirection
