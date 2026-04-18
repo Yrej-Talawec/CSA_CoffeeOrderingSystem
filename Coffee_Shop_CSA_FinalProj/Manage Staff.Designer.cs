@@ -28,138 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtName = new TextBox();
+            txtSalary = new TextBox();
+            txtPosition = new TextBox();
+            txtSearch = new TextBox();
             dataGridView1 = new DataGridView();
-            Emp_ID = new DataGridViewTextBoxColumn();
-            Emp_Email = new DataGridViewTextBoxColumn();
-            position = new DataGridViewTextBoxColumn();
             btnAdd = new Button();
-            button2 = new Button();
-            delete = new Button();
-            exit = new Button();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            btnSearch = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // txtName
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(34, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Emp_ID";
+            txtName.Location = new Point(151, 26);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(125, 27);
+            txtName.TabIndex = 0;
+            txtName.Text = "name";
             // 
-            // label2
+            // txtSalary
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(34, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(61, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Position";
+            txtSalary.Location = new Point(151, 92);
+            txtSalary.Name = "txtSalary";
+            txtSalary.Size = new Size(125, 27);
+            txtSalary.TabIndex = 1;
+            txtSalary.Text = "Salary";
             // 
-            // label3
+            // txtPosition
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(34, 43);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Emp_email";
+            txtPosition.Location = new Point(151, 59);
+            txtPosition.Name = "txtPosition";
+            txtPosition.Size = new Size(125, 27);
+            txtPosition.TabIndex = 2;
+            txtPosition.Text = "postion";
             // 
-            // textBox1
+            // txtSearch
             // 
-            textBox1.Location = new Point(120, 7);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(120, 73);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(125, 40);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 5;
+            txtSearch.Location = new Point(151, 125);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(125, 27);
+            txtSearch.TabIndex = 3;
+            txtSearch.Text = "Search";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Emp_ID, Emp_Email, position });
-            dataGridView1.Location = new Point(12, 261);
+            dataGridView1.Location = new Point(551, 225);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(429, 188);
-            dataGridView1.TabIndex = 6;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Emp_ID
-            // 
-            Emp_ID.HeaderText = "Emp_ID";
-            Emp_ID.MinimumWidth = 6;
-            Emp_ID.Name = "Emp_ID";
-            Emp_ID.Width = 125;
-            // 
-            // Emp_Email
-            // 
-            Emp_Email.HeaderText = "Emp_Email";
-            Emp_Email.MinimumWidth = 6;
-            Emp_Email.Name = "Emp_Email";
-            Emp_Email.Width = 125;
-            // 
-            // position
-            // 
-            position.HeaderText = "Position";
-            position.MinimumWidth = 6;
-            position.Name = "position";
-            position.Width = 125;
+            dataGridView1.Size = new Size(300, 188);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            dataGridView1.Click += dataGridView1_Click;
+            dataGridView1.Layout += dataGridView1_Layout;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(8, 132);
+            btnAdd.Location = new Point(358, 384);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(94, 29);
-            btnAdd.TabIndex = 7;
+            btnAdd.TabIndex = 5;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // button2
+            // btnDelete
             // 
-            button2.Location = new Point(232, 132);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 8;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(12, 384);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 6;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // delete
+            // btnUpdate
             // 
-            delete.Location = new Point(120, 132);
-            delete.Name = "delete";
-            delete.Size = new Size(94, 29);
-            delete.TabIndex = 9;
-            delete.Text = "Delete";
-            delete.UseVisualStyleBackColor = true;
+            btnUpdate.Location = new Point(127, 384);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 7;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // exit
+            // btnSearch
             // 
-            exit.Location = new Point(868, 420);
-            exit.Name = "exit";
-            exit.Size = new Size(94, 29);
-            exit.TabIndex = 11;
-            exit.Text = "Exit";
-            exit.UseVisualStyleBackColor = true;
+            btnSearch.Location = new Point(240, 384);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 8;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // Managestaff
             // 
@@ -168,17 +132,15 @@
             BackColor = Color.Snow;
             BackgroundImage = Properties.Resources.kapi;
             ClientSize = new Size(997, 490);
-            Controls.Add(exit);
-            Controls.Add(delete);
-            Controls.Add(button2);
+            Controls.Add(btnSearch);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(txtSearch);
+            Controls.Add(txtPosition);
+            Controls.Add(txtSalary);
+            Controls.Add(txtName);
             Name = "Managestaff";
             Text = "Manage Staff";
             FormClosed += Form1_FormClosed;
@@ -190,19 +152,14 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtName;
+        private TextBox txtSalary;
+        private TextBox txtPosition;
+        private TextBox txtSearch;
         private DataGridView dataGridView1;
         private Button btnAdd;
-        private Button button2;
-        private Button delete;
-        private Button exit;
-        private DataGridViewTextBoxColumn Emp_ID;
-        private DataGridViewTextBoxColumn Emp_Email;
-        private DataGridViewTextBoxColumn position;
+        private Button btnDelete;
+        private Button btnUpdate;
+        private Button btnSearch;
     }
 }
