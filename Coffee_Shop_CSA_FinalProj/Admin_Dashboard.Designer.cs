@@ -95,11 +95,11 @@
             // 
             dataGridView1.BackgroundColor = Color.Moccasin;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(352, 114);
+            dataGridView1.Location = new Point(331, 114);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(488, 339);
+            dataGridView1.Size = new Size(509, 339);
             dataGridView1.TabIndex = 5;
             // 
             // label2
@@ -107,7 +107,7 @@
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Image = Properties.Resources._8;
-            label2.Location = new Point(352, 85);
+            label2.Location = new Point(331, 84);
             label2.Name = "label2";
             label2.Size = new Size(139, 15);
             label2.TabIndex = 6;
@@ -135,7 +135,7 @@
             // pictureBox3
             // 
             pictureBox3.BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__14_;
-            pictureBox3.Location = new Point(44, 67);
+            pictureBox3.Location = new Point(25, 67);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(286, 385);
             pictureBox3.TabIndex = 9;
