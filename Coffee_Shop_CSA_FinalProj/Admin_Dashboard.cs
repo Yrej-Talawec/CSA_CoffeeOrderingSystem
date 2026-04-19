@@ -75,7 +75,6 @@ namespace Coffee_Shop_CSA_FinalProj
 
                         logCmd.ExecuteNonQuery();
 
-
                         //set current user to null
                         CurrentUser.UserID = 0;
                         CurrentUser.UserRole = "";

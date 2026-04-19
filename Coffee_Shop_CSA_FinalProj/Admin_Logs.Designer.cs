@@ -32,8 +32,10 @@
             label1 = new Label();
             cbfilter = new ComboBox();
             cbaction = new ComboBox();
-            comboBox2 = new ComboBox();
             label2 = new Label();
+            btnsearch = new Button();
+            label3 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -64,40 +66,61 @@
             cbfilter.Name = "cbfilter";
             cbfilter.Size = new Size(190, 28);
             cbfilter.TabIndex = 5;
+            cbfilter.SelectedIndexChanged += cbfilter_SelectedIndexChanged_1;
             // 
             // cbaction
             // 
             cbaction.FormattingEnabled = true;
-            cbaction.Location = new Point(327, 32);
+            cbaction.Location = new Point(271, 32);
             cbaction.Name = "cbaction";
-            cbaction.Size = new Size(151, 28);
+            cbaction.Size = new Size(166, 28);
             cbaction.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(408, 101);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 7;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(327, 9);
+            label2.Location = new Point(271, 9);
             label2.Name = "label2";
             label2.Size = new Size(109, 20);
             label2.TabIndex = 8;
             label2.Text = "Filter by Action";
             label2.Click += label2_Click;
             // 
+            // btnsearch
+            // 
+            btnsearch.Location = new Point(681, 79);
+            btnsearch.Name = "btnsearch";
+            btnsearch.Size = new Size(94, 29);
+            btnsearch.TabIndex = 9;
+            btnsearch.Text = "Search";
+            btnsearch.UseVisualStyleBackColor = true;
+            btnsearch.Click += btnsearch_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(482, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(41, 20);
+            label3.TabIndex = 10;
+            label3.Text = "Date";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(482, 34);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(293, 27);
+            dateTimePicker1.TabIndex = 11;
+            // 
             // Admin_Logs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 514);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label3);
+            Controls.Add(btnsearch);
             Controls.Add(label2);
-            Controls.Add(comboBox2);
             Controls.Add(cbaction);
             Controls.Add(cbfilter);
             Controls.Add(label1);
@@ -115,7 +138,9 @@
         private Label label1;
         private ComboBox cbfilter;
         private ComboBox cbaction;
-        private ComboBox comboBox2;
         private Label label2;
+        private Button btnsearch;
+        private Label label3;
+        private DateTimePicker dateTimePicker1;
     }
 }

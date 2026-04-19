@@ -17,6 +17,10 @@ namespace Coffee_Shop_CSA_FinalProj
         {
             InitializeComponent();
             cbfilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbaction.DropDownStyle = ComboBoxStyle.DropDownList;
+            tableOptions();
+            dateTimePicker1.ShowCheckBox = true;
+            cbaction.Enabled = false;
         }
         string connStr = "server=localhost;port=3306;user id=root;password=*504487*;database=coffee_shop_csa;";
         private void tableOptions()
@@ -29,53 +33,87 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void MenuOptions()
         {
-            cbaction.Items.Add("Insert Item");
-            cbaction.Items.Add("Update Menu");
-            cbaction.Items.Add("Delete Item");
+            cbaction.Items.Add("Menu Item Added");
+            cbaction.Items.Add("Menu Item Updated");
+            cbaction.Items.Add("Menu Item Removed");
         }
 
         private void staffOptions()
         {
-            cbaction.Items.Add("Insert Staff");
-            cbaction.Items.Add("Update Staff");
-            cbaction.Items.Add("Delete Staff");
+            cbaction.Items.Add("Staff Member Added");
+            cbaction.Items.Add("Staff Member Updated");
+            cbaction.Items.Add("Staff Member Removed");
         }
 
-        private void defaultOptions()
+        private void logOptions()
         {
-            MenuOptions();
-            staffOptions();
+            cbaction.Items.Add("User Login");
+            cbaction.Items.Add("User Logout");
+            cbaction.Items.Add("Added to Menu");
+            cbaction.Items.Add("Updated Menu Item");
+            cbaction.Items.Add("Removed from Menu");
+            cbaction.Items.Add("Inserted a staff");
+            cbaction.Items.Add("Removed a staff");
+            cbaction.Items.Add("Updated a Staff");
         }
 
+        private void previousOrderOptions()
+        {
+            cbaction.Items.Add("View Previous Orders");
+            cbaction.Items.Add("Export Previous Orders");
+        }
+
+        string selectedfilter = "";
+        string selectedaction = "";
+        
 
         private void LoadData()
         {
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
-                try
-                {
-                    conn.Open();
+                conn.Open();
 
-                    string query = "SELECT * FROM logs WHERE UAction = @category";
+                string query = "SELECT * FROM logs WHERE 1=1";
 
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    dataGridView1.Columns["CUserID"].HeaderText = "ID";
-                    dataGridView1.Columns["username"].HeaderText = "Username";
-                    dataGridView1.Columns["status"].HeaderText = "Account Status";
-                    adapter.Fill(dt);
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
 
-                    dataGridView1.DataSource = dt;
-                }
-                catch (Exception ex)
+                // 🔹 Category filter (cbfilter)
+                if (cbfilter.SelectedItem != null && cbfilter.SelectedItem.ToString() != "All Logs")
                 {
-                    MessageBox.Show("Database Connection Error: " + ex.Message, "Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    query += " AND LogCategory = @category";
+                    cmd.Parameters.AddWithValue("@category", cbfilter.SelectedItem.ToString());
                 }
-                finally
+
+                // 🔹 Action filter
+                if (cbaction.SelectedItem != null && cbaction.SelectedItem.ToString() != "")
                 {
-                    conn.Close();
+                    query += " AND UAction = @action";
+                    cmd.Parameters.AddWithValue("@action", cbaction.SelectedItem.ToString());
                 }
+
+                // 🔹 Date filter (optional)
+                if (dateTimePicker1.Checked)
+                {
+                    query += " AND TimeCreated >= @start AND TimeCreated < @end";
+
+                    DateTime start = dateTimePicker1.Value.Date;
+                    DateTime end = start.AddDays(1);
+
+                    cmd.Parameters.AddWithValue("@start", start);
+                    cmd.Parameters.AddWithValue("@end", end);
+                }
+
+                query += " ORDER BY TimeCreated DESC";
+
+                cmd.CommandText = query;
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
 
@@ -105,6 +143,43 @@ namespace Coffee_Shop_CSA_FinalProj
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbfilter_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbfilter.SelectedText == "All Logs")
+            {
+                selectedfilter = "All Logs";
+                cbaction.Enabled = true;
+                cbaction.Items.Clear();
+                logOptions();
+            }
+            else if (cbfilter.SelectedText == "Edit Menu")
+            {
+                selectedfilter = "Edit Menu";
+                cbaction.Enabled = true;
+                cbaction.Items.Clear();
+                MenuOptions();
+            }
+            else if (cbfilter.SelectedText == "Staff Management")
+            {
+                selectedfilter = "Staff Management";
+                cbaction.Enabled = true;
+                cbaction.Items.Clear();
+                staffOptions();
+            }
+            else if (cbfilter.SelectedText == "Previous Orders")
+            {
+                selectedfilter = "Previous Orders"; 
+                cbaction.Enabled = true;
+                cbaction.Items.Clear();
+                previousOrderOptions();
+            }
+        }
+
+        private void btnsearch_Click(object sender, EventArgs e)
         {
 
         }
