@@ -123,8 +123,8 @@ namespace Coffee_Shop_CSA_FinalProj
                             //WAIT LANG TTOOOOOOOOOOOO
                             //Customer_Info orderForm = new Customer_Info();
                             //orderForm.Show();
-                            CustomerInfo orderForm = new CustomerInfo();
-                            orderForm.Show();
+                            Barista_Dashboard barista_dash = new Barista_Dashboard();
+                            barista_dash.Show();
                             this.Hide();
                         }
 
