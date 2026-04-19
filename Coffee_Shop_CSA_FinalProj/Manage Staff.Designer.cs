@@ -46,48 +46,43 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(12, 173);
-            txtName.Margin = new Padding(3, 2, 3, 2);
+            txtName.Location = new Point(115, 214);
             txtName.Name = "txtName";
-            txtName.Size = new Size(110, 23);
+            txtName.Size = new Size(125, 27);
             txtName.TabIndex = 0;
             txtName.Text = "name";
             // 
             // txtSalary
             // 
-            txtSalary.Location = new Point(12, 222);
-            txtSalary.Margin = new Padding(3, 2, 3, 2);
+            txtSalary.Location = new Point(115, 280);
             txtSalary.Name = "txtSalary";
-            txtSalary.Size = new Size(110, 23);
+            txtSalary.Size = new Size(125, 27);
             txtSalary.TabIndex = 1;
             txtSalary.Text = "Salary";
             // 
             // txtPosition
             // 
-            txtPosition.Location = new Point(12, 197);
-            txtPosition.Margin = new Padding(3, 2, 3, 2);
+            txtPosition.Location = new Point(115, 247);
             txtPosition.Name = "txtPosition";
-            txtPosition.Size = new Size(110, 23);
+            txtPosition.Size = new Size(125, 27);
             txtPosition.TabIndex = 2;
             txtPosition.Text = "postion";
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(12, 247);
-            txtSearch.Margin = new Padding(3, 2, 3, 2);
+            txtSearch.Location = new Point(115, 313);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(110, 23);
+            txtSearch.Size = new Size(125, 27);
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Search";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(482, 169);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(551, 225);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(262, 141);
+            dataGridView1.Size = new Size(299, 188);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
@@ -96,10 +91,9 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(313, 288);
-            btnAdd.Margin = new Padding(3, 2, 3, 2);
+            btnAdd.Location = new Point(358, 384);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(82, 22);
+            btnAdd.Size = new Size(94, 29);
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -107,10 +101,9 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(10, 288);
-            btnDelete.Margin = new Padding(3, 2, 3, 2);
+            btnDelete.Location = new Point(11, 384);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(82, 22);
+            btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 6;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -118,10 +111,9 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(111, 288);
-            btnUpdate.Margin = new Padding(3, 2, 3, 2);
+            btnUpdate.Location = new Point(127, 384);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(82, 22);
+            btnUpdate.Size = new Size(94, 29);
             btnUpdate.TabIndex = 7;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -129,10 +121,9 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(210, 288);
-            btnSearch.Margin = new Padding(3, 2, 3, 2);
+            btnSearch.Location = new Point(240, 384);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(82, 22);
+            btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 8;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
@@ -141,28 +132,30 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources._5;
-            pictureBox1.Location = new Point(0, -2);
+            pictureBox1.Location = new Point(0, -3);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(853, 50);
+            pictureBox1.Size = new Size(975, 67);
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__11_;
-            pictureBox2.Location = new Point(0, 12);
+            pictureBox2.Location = new Point(0, 16);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(200, 36);
+            pictureBox2.Size = new Size(229, 48);
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
             // 
             // Managestaff
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             BackgroundImage = Properties.Resources._8;
-            ClientSize = new Size(852, 464);
+            ClientSize = new Size(974, 619);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(btnSearch);
@@ -174,7 +167,6 @@
             Controls.Add(txtPosition);
             Controls.Add(txtSalary);
             Controls.Add(txtName);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Managestaff";
             Text = "Manage Staff";
             FormClosed += Form1_FormClosed;
