@@ -63,6 +63,16 @@ namespace Coffee_Shop_CSA_FinalProj.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Cream Playful Retro Coffee Shop Sign A4 Document (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Johnny_Lloyd {
             get {
                 object obj = ResourceManager.GetObject("Johnny Lloyd", resourceCulture);

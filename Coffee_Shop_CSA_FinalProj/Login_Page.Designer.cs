@@ -37,9 +37,10 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(62, 129);
+            btnLogin.Location = new Point(94, 258);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(94, 29);
+            btnLogin.Size = new Size(82, 22);
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
@@ -48,49 +49,52 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(13, 26);
+            label1.Location = new Point(51, 181);
             label1.Name = "label1";
-            label1.Size = new Size(49, 20);
+            label1.Size = new Size(39, 15);
             label1.TabIndex = 1;
             label1.Text = "Email:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(13, 69);
+            label2.Location = new Point(51, 213);
             label2.Name = "label2";
-            label2.Size = new Size(73, 20);
+            label2.Size = new Size(60, 15);
             label2.TabIndex = 2;
             label2.Text = "Password:";
             // 
             // txtBoxPassword
             // 
-            txtBoxPassword.Location = new Point(103, 69);
+            txtBoxPassword.Location = new Point(130, 213);
+            txtBoxPassword.Margin = new Padding(3, 2, 3, 2);
             txtBoxPassword.Name = "txtBoxPassword";
-            txtBoxPassword.Size = new Size(125, 27);
+            txtBoxPassword.Size = new Size(110, 23);
             txtBoxPassword.TabIndex = 4;
             txtBoxPassword.TextChanged += txtBoxPassword_TextChanged;
             // 
             // txtBoxEmail
             // 
-            txtBoxEmail.Location = new Point(103, 26);
+            txtBoxEmail.Location = new Point(130, 181);
+            txtBoxEmail.Margin = new Padding(3, 2, 3, 2);
             txtBoxEmail.Name = "txtBoxEmail";
-            txtBoxEmail.Size = new Size(125, 27);
+            txtBoxEmail.Size = new Size(110, 23);
             txtBoxEmail.TabIndex = 3;
             txtBoxEmail.TextChanged += txtBoxEmail_TextChanged;
             // 
             // Login_Page
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Johnny_Lloyd;
+            BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__4_;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(641, 384);
+            ClientSize = new Size(852, 464);
             Controls.Add(txtBoxPassword);
             Controls.Add(txtBoxEmail);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnLogin);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Login_Page";
             Text = "Login_Page";
             Load += Login_Page_Load;
