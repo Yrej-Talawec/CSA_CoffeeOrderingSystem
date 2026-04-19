@@ -49,7 +49,7 @@ namespace Coffee_Shop_CSA_FinalProj
             if (result == DialogResult.Yes)
             {
 
-                LoginForm loginForm = new LoginForm();
+                Login_Page loginForm = new Login_Page();
                 loginForm.Show();
                 this.Close();
             }
