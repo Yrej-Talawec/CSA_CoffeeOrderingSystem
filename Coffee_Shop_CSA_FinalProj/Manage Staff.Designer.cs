@@ -36,53 +36,69 @@
             btnAdd = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
-            btnSearch = new Button();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // txtName
             // 
-            txtName.Location = new Point(115, 214);
+            txtName.BackColor = Color.Moccasin;
+            txtName.Font = new Font("Segoe UI", 12F);
+            txtName.Location = new Point(41, 117);
+            txtName.Margin = new Padding(3, 2, 3, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(125, 27);
+            txtName.Size = new Size(114, 29);
             txtName.TabIndex = 0;
-            txtName.Text = "name";
+            txtName.Text = "Name";
+            txtName.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSalary
             // 
-            txtSalary.Location = new Point(115, 280);
+            txtSalary.BackColor = Color.Moccasin;
+            txtSalary.Font = new Font("Segoe UI", 12F);
+            txtSalary.Location = new Point(41, 218);
+            txtSalary.Margin = new Padding(3, 2, 3, 2);
             txtSalary.Name = "txtSalary";
-            txtSalary.Size = new Size(125, 27);
+            txtSalary.Size = new Size(114, 29);
             txtSalary.TabIndex = 1;
             txtSalary.Text = "Salary";
+            txtSalary.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPosition
             // 
-            txtPosition.Location = new Point(115, 247);
+            txtPosition.BackColor = Color.Moccasin;
+            txtPosition.Font = new Font("Segoe UI", 12F);
+            txtPosition.Location = new Point(41, 167);
+            txtPosition.Margin = new Padding(3, 2, 3, 2);
             txtPosition.Name = "txtPosition";
-            txtPosition.Size = new Size(125, 27);
+            txtPosition.Size = new Size(114, 29);
             txtPosition.TabIndex = 2;
-            txtPosition.Text = "postion";
+            txtPosition.Text = "Position";
+            txtPosition.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(115, 313);
+            txtSearch.BackColor = Color.Moccasin;
+            txtSearch.Font = new Font("Segoe UI", 12F);
+            txtSearch.Location = new Point(41, 273);
+            txtSearch.Margin = new Padding(3, 2, 3, 2);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(125, 27);
+            txtSearch.Size = new Size(114, 29);
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Search";
+            txtSearch.TextAlign = HorizontalAlignment.Center;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.Moccasin;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(551, 225);
+            dataGridView1.Location = new Point(190, 92);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(299, 188);
+            dataGridView1.Size = new Size(650, 256);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
@@ -91,9 +107,12 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(358, 384);
+            btnAdd.BackgroundImage = Properties.Resources._7;
+            btnAdd.Font = new Font("Segoe UI", 12F);
+            btnAdd.Location = new Point(326, 379);
+            btnAdd.Margin = new Padding(3, 2, 3, 2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(94, 29);
+            btnAdd.Size = new Size(114, 31);
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -101,9 +120,12 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(11, 384);
+            btnDelete.BackgroundImage = Properties.Resources._7;
+            btnDelete.Font = new Font("Segoe UI", 12F);
+            btnDelete.Location = new Point(566, 379);
+            btnDelete.Margin = new Padding(3, 2, 3, 2);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(94, 29);
+            btnDelete.Size = new Size(114, 31);
             btnDelete.TabIndex = 6;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -111,69 +133,62 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(127, 384);
+            btnUpdate.BackgroundImage = Properties.Resources._7;
+            btnUpdate.Font = new Font("Segoe UI", 12F);
+            btnUpdate.Location = new Point(446, 379);
+            btnUpdate.Margin = new Padding(3, 2, 3, 2);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.Size = new Size(114, 31);
             btnUpdate.TabIndex = 7;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
             // 
-            // btnSearch
-            // 
-            btnSearch.Location = new Point(240, 384);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(94, 29);
-            btnSearch.TabIndex = 8;
-            btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources._5;
-            pictureBox1.Location = new Point(0, -3);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Location = new Point(0, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(975, 67);
+            pictureBox1.Size = new Size(853, 50);
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // label1
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__11_;
-            pictureBox2.Location = new Point(0, 16);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(229, 48);
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Image = Properties.Resources._5;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(191, 37);
+            label1.TabIndex = 12;
+            label1.Text = "Manage Staff";
             // 
             // Managestaff
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            BackgroundImage = Properties.Resources._8;
-            ClientSize = new Size(974, 619);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(btnSearch);
-            Controls.Add(btnUpdate);
-            Controls.Add(btnDelete);
-            Controls.Add(btnAdd);
-            Controls.Add(dataGridView1);
+            BackgroundImage = Properties.Resources._1;
+            ClientSize = new Size(852, 454);
             Controls.Add(txtSearch);
             Controls.Add(txtPosition);
             Controls.Add(txtSalary);
             Controls.Add(txtName);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnDelete);
+            Controls.Add(btnAdd);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Managestaff";
             Text = "Manage Staff";
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,8 +203,7 @@
         private Button btnAdd;
         private Button btnDelete;
         private Button btnUpdate;
-        private Button btnSearch;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private Label label1;
     }
 }

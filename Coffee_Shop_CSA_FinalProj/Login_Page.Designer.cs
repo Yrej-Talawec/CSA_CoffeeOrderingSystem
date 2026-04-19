@@ -88,7 +88,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__4_;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(852, 464);
+            ClientSize = new Size(852, 454);
             Controls.Add(txtBoxPassword);
             Controls.Add(txtBoxEmail);
             Controls.Add(label2);

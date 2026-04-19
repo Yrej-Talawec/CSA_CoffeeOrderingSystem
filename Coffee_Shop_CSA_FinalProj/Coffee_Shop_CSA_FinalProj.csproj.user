@@ -13,6 +13,9 @@
     <Compile Update="Customer_Info.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Edit Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Manage Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,9 +23,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login_Page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="OrderHistory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Order_Page.cs">
