@@ -84,7 +84,11 @@ namespace Coffee_Shop_CSA_FinalProj
                     {
                         int userId = Convert.ToInt32(reader["user_id"]);
                         string userRole = reader["user_role"].ToString();
-                        reader.Close(); 
+                        reader.Close();
+
+                        //store current user
+                        CurrentUser.UserID = userId;
+                        CurrentUser.UserRole = userRole;
 
                         //updated status in users when user logs in
                         string updatestatusq = "UPDATE users SET status = 'Logged In' WHERE user_id = @id";
