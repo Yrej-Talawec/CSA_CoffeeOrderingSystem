@@ -28,34 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cbfilter = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
             dataGridView1 = new DataGridView();
+            label1 = new Label();
+            cbfilter = new ComboBox();
+            cbaction = new ComboBox();
+            comboBox2 = new ComboBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // cbfilter
-            // 
-            cbfilter.FormattingEnabled = true;
-            cbfilter.Location = new Point(42, 36);
-            cbfilter.Name = "cbfilter";
-            cbfilter.Size = new Size(151, 28);
-            cbfilter.TabIndex = 0;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(308, 39);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 1;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(308, 89);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
-            dateTimePicker2.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -63,30 +43,79 @@
             dataGridView1.Location = new Point(12, 149);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(776, 289);
+            dataGridView1.Size = new Size(776, 353);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(42, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(129, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Filter by Category:";
+            label1.Click += label1_Click;
+            // 
+            // cbfilter
+            // 
+            cbfilter.FormattingEnabled = true;
+            cbfilter.Location = new Point(42, 32);
+            cbfilter.Name = "cbfilter";
+            cbfilter.Size = new Size(190, 28);
+            cbfilter.TabIndex = 5;
+            // 
+            // cbaction
+            // 
+            cbaction.FormattingEnabled = true;
+            cbaction.Location = new Point(327, 32);
+            cbaction.Name = "cbaction";
+            cbaction.Size = new Size(151, 28);
+            cbaction.TabIndex = 6;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(408, 101);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(151, 28);
+            comboBox2.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(327, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(109, 20);
+            label2.TabIndex = 8;
+            label2.Text = "Filter by Action";
+            label2.Click += label2_Click;
             // 
             // Admin_Logs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            ClientSize = new Size(800, 514);
+            Controls.Add(label2);
+            Controls.Add(comboBox2);
+            Controls.Add(cbaction);
             Controls.Add(cbfilter);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
             Name = "Admin_Logs";
             Text = "Admin_Logs";
             Load += Admin_Logs_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private ComboBox cbfilter;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
         private DataGridView dataGridView1;
+        private Label label1;
+        private ComboBox cbfilter;
+        private ComboBox cbaction;
+        private ComboBox comboBox2;
+        private Label label2;
     }
 }

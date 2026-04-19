@@ -32,7 +32,10 @@
             btnstaff = new Button();
             btnmenu = new Button();
             btnreports = new Button();
-            button1 = new Button();
+            btnlogout = new Button();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -72,16 +75,35 @@
             btnreports.TabIndex = 3;
             btnreports.Text = "Check Reports";
             btnreports.UseVisualStyleBackColor = true;
+            btnreports.Click += btnreports_Click;
             // 
-            // button1
+            // btnlogout
             // 
-            button1.Location = new Point(22, 163);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 29);
-            button1.TabIndex = 4;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnlogout.Location = new Point(22, 163);
+            btnlogout.Name = "btnlogout";
+            btnlogout.Size = new Size(130, 29);
+            btnlogout.TabIndex = 4;
+            btnlogout.Text = "Logout";
+            btnlogout.UseVisualStyleBackColor = true;
+            btnlogout.Click += btnlogout_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(245, 128);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(501, 262);
+            dataGridView1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(245, 93);
+            label2.Name = "label2";
+            label2.Size = new Size(174, 20);
+            label2.TabIndex = 6;
+            label2.Text = "Current Users Logged in?";
             // 
             // Admin_Dashboard
             // 
@@ -90,15 +112,18 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.kape;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(912, 493);
+            Controls.Add(label2);
+            Controls.Add(dataGridView1);
+            Controls.Add(btnlogout);
             Controls.Add(btnreports);
             Controls.Add(btnmenu);
             Controls.Add(btnstaff);
             Controls.Add(label1);
             Name = "Admin_Dashboard";
-            Text = "Admin_Dashboard";
+            Text = "ta";
             Load += Admin_Dashboard_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,6 +134,8 @@
         private Button btnstaff;
         private Button btnmenu;
         private Button btnreports;
-        private Button button1;
+        private Button btnlogout;
+        private DataGridView dataGridView1;
+        private Label label2;
     }
 }
