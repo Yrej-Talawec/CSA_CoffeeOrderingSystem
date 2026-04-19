@@ -118,11 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="kape" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kape.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (4).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (12).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (8).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cream Playful Retro Coffee Shop Sign A4 Document (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (10).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,19 +142,31 @@
   <data name="Johnny Lloyd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Johnny Lloyd.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kapi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kapi.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="b4d6468ae473e3d9de89821b63bcc2a7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b4d6468ae473e3d9de89821b63bcc2a7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (4).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cream Playful Retro Coffee Shop Sign A4 Document (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (9).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (13).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kapi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kapi.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (11).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kape.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cream Playful Retro Coffee Shop Sign A4 Document (14)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cream Playful Retro Coffee Shop Sign A4 Document (14).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -16,7 +16,7 @@ namespace Coffee_Shop_CSA_FinalProj
         {
             InitializeComponent();
         }
-        
+
         //db connection
         string connStr = "server=localhost;port=3306;user id=root;password=*504487*;database=coffee_shop_csa;";
 
@@ -29,7 +29,7 @@ namespace Coffee_Shop_CSA_FinalProj
         {
             Managestaff nextForm = new Managestaff();
             nextForm.Show();
-            
+
         }
 
         private void btnmenu_Click(object sender, EventArgs e)
@@ -53,6 +53,16 @@ namespace Coffee_Shop_CSA_FinalProj
                 loginForm.Show();
                 this.Close();
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
