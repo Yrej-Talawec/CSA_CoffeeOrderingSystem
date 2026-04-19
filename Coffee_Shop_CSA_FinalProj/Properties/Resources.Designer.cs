@@ -63,9 +63,59 @@ namespace Coffee_Shop_CSA_FinalProj.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5 {
+            get {
+                object obj = ResourceManager.GetObject("5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8 {
+            get {
+                object obj = ResourceManager.GetObject("8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b4d6468ae473e3d9de89821b63bcc2a7 {
+            get {
+                object obj = ResourceManager.GetObject("b4d6468ae473e3d9de89821b63bcc2a7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Cream Playful Retro Coffee Shop Sign A4 Document (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__4_ {
             get {
                 object obj = ResourceManager.GetObject("Cream Playful Retro Coffee Shop Sign A4 Document (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Cream Playful Retro Coffee Shop Sign A4 Document (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

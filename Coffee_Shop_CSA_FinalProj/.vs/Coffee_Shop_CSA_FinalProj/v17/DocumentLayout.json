@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\63938\\source\\repos\\Yrej-Talawec\\CSA_CoffeeOrderingSystem\\Coffee_Shop_CSA_FinalProj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CFCC93F-A853-4E07-8E0A-E2E796F49AB7}|Coffee_Shop_CSA_FinalProj.csproj|c:\\users\\63938\\source\\repos\\yrej-talawec\\csa_coffeeorderingsystem\\coffee_shop_csa_finalproj\\login_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1CFCC93F-A853-4E07-8E0A-E2E796F49AB7}|Coffee_Shop_CSA_FinalProj.csproj|c:\\users\\63938\\source\\repos\\yrej-talawec\\csa_coffeeorderingsystem\\coffee_shop_csa_finalproj\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1CFCC93F-A853-4E07-8E0A-E2E796F49AB7}|Coffee_Shop_CSA_FinalProj.csproj|solutionrelative:admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CFCC93F-A853-4E07-8E0A-E2E796F49AB7}|Coffee_Shop_CSA_FinalProj.csproj|C:\\Users\\63938\\source\\repos\\Yrej-Talawec\\CSA_CoffeeOrderingSystem\\Coffee_Shop_CSA_FinalProj\\login_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1CFCC93F-A853-4E07-8E0A-E2E796F49AB7}|Coffee_Shop_CSA_FinalProj.csproj|solutionrelative:login_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -23,14 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Admin_Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\63938\\source\\repos\\Yrej-Talawec\\CSA_CoffeeOrderingSystem\\Coffee_Shop_CSA_FinalProj\\Admin_Dashboard.cs",
+              "RelativeDocumentMoniker": "Admin_Dashboard.cs",
+              "ToolTip": "C:\\Users\\63938\\source\\repos\\Yrej-Talawec\\CSA_CoffeeOrderingSystem\\Coffee_Shop_CSA_FinalProj\\Admin_Dashboard.cs [Design]",
+              "RelativeToolTip": "Admin_Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T06:24:57.178Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login_Page.cs [Design]",
               "DocumentMoniker": "C:\\Users\\63938\\source\\repos\\Yrej-Talawec\\CSA_CoffeeOrderingSystem\\Coffee_Shop_CSA_FinalProj\\Login_Page.cs",
               "RelativeDocumentMoniker": "Login_Page.cs",
               "ToolTip": "C:\\Users\\63938\\source\\repos\\Yrej-Talawec\\CSA_CoffeeOrderingSystem\\Coffee_Shop_CSA_FinalProj\\Login_Page.cs [Design]",
               "RelativeToolTip": "Login_Page.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T06:06:58.809Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-04-19T06:06:58.809Z"
             }
           ]
         }

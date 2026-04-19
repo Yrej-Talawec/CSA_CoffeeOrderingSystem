@@ -28,30 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             btnstaff = new Button();
             btnmenu = new Button();
             btnreports = new Button();
             btnlogout = new Button();
             dataGridView1 = new DataGridView();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(22, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(130, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Admin Dashboard";
             // 
             // btnstaff
             // 
-            btnstaff.Location = new Point(22, 58);
+            btnstaff.Location = new Point(119, 200);
+            btnstaff.Margin = new Padding(3, 2, 3, 2);
             btnstaff.Name = "btnstaff";
-            btnstaff.Size = new Size(130, 29);
+            btnstaff.Size = new Size(114, 22);
             btnstaff.TabIndex = 1;
             btnstaff.Text = "Manage Staff";
             btnstaff.UseVisualStyleBackColor = true;
@@ -59,9 +56,10 @@
             // 
             // btnmenu
             // 
-            btnmenu.Location = new Point(22, 93);
+            btnmenu.Location = new Point(119, 152);
+            btnmenu.Margin = new Padding(3, 2, 3, 2);
             btnmenu.Name = "btnmenu";
-            btnmenu.Size = new Size(130, 29);
+            btnmenu.Size = new Size(114, 22);
             btnmenu.TabIndex = 2;
             btnmenu.Text = "Edit Menu";
             btnmenu.UseVisualStyleBackColor = true;
@@ -69,9 +67,10 @@
             // 
             // btnreports
             // 
-            btnreports.Location = new Point(22, 128);
+            btnreports.Location = new Point(119, 257);
+            btnreports.Margin = new Padding(3, 2, 3, 2);
             btnreports.Name = "btnreports";
-            btnreports.Size = new Size(130, 29);
+            btnreports.Size = new Size(114, 22);
             btnreports.TabIndex = 3;
             btnreports.Text = "Check Reports";
             btnreports.UseVisualStyleBackColor = true;
@@ -79,9 +78,10 @@
             // 
             // btnlogout
             // 
-            btnlogout.Location = new Point(22, 163);
+            btnlogout.Location = new Point(119, 314);
+            btnlogout.Margin = new Padding(3, 2, 3, 2);
             btnlogout.Name = "btnlogout";
-            btnlogout.Size = new Size(130, 29);
+            btnlogout.Size = new Size(114, 22);
             btnlogout.TabIndex = 4;
             btnlogout.Text = "Logout";
             btnlogout.UseVisualStyleBackColor = true;
@@ -89,53 +89,91 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.Moccasin;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(245, 128);
+            dataGridView1.Location = new Point(366, 114);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(501, 262);
+            dataGridView1.Size = new Size(474, 339);
             dataGridView1.TabIndex = 5;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(245, 93);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Image = Properties.Resources._8;
+            label2.Location = new Point(366, 86);
             label2.Name = "label2";
-            label2.Size = new Size(174, 20);
+            label2.Size = new Size(139, 15);
             label2.TabIndex = 6;
             label2.Text = "Current Users Logged in?";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources._5;
+            pictureBox1.Location = new Point(-1, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(853, 50);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__10_;
+            pictureBox2.Location = new Point(-1, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(265, 37);
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = Properties.Resources.Cream_Playful_Retro_Coffee_Shop_Sign_A4_Document__9_;
+            pictureBox3.Location = new Point(12, 67);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(335, 385);
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            // 
             // Admin_Dashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            BackgroundImage = Properties.Resources.kape;
+            BackgroundImage = Properties.Resources._8;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(912, 493);
-            Controls.Add(label2);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(852, 464);
+            Controls.Add(pictureBox2);
             Controls.Add(btnlogout);
             Controls.Add(btnreports);
             Controls.Add(btnmenu);
             Controls.Add(btnstaff);
-            Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox3);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Admin_Dashboard";
             Text = "ta";
             Load += Admin_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Button btnstaff;
         private Button btnmenu;
         private Button btnreports;
         private Button btnlogout;
         private DataGridView dataGridView1;
         private Label label2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
