@@ -91,7 +91,19 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void btnCustomerInfoToLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult result = MessageBox.Show("Are you sure you want to return?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Returning to Barista Dashboard...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+            }
+            else
+            {
+
+            }
+
         }
     }
 }
