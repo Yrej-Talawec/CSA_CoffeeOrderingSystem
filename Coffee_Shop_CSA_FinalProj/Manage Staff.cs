@@ -1,8 +1,9 @@
-﻿using MySql.Data.MySqlClient;
-using System.Data;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace Coffee_Shop_CSA_FinalProj
         {
             InitializeComponent();
         }
-        string connStr = "server=localhost;port=3306;user id=root;password=coffeeshop;database=coffee_shop_csa;";
+        string connStr = "server=localhost;port=3306;user id=root;password=*504487*;database=coffee_shop_csa;";
         private void Form1_Load(object sender, EventArgs e)
         {
             using (MySqlConnection conn = new MySqlConnection(connStr))
@@ -37,6 +38,23 @@ namespace Coffee_Shop_CSA_FinalProj
                 adapter.Fill(dt);
 
                 dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void logRecord(string action)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+                //Log record
+                string logQuery = "INSERT INTO logs (CUserID, UAction, ADescription) VALUES (@id, @action, @desc)";
+                MySqlCommand logCmd = new MySqlCommand(logQuery, conn);
+
+                logCmd.Parameters.AddWithValue("@id", CurrentUser.UserID);
+                logCmd.Parameters.AddWithValue("@action", action);
+                logCmd.Parameters.AddWithValue("@desc", $"{CurrentUser.UserRole} {action}");
+
+                logCmd.ExecuteNonQuery();
             }
         }
 
@@ -65,15 +83,18 @@ namespace Coffee_Shop_CSA_FinalProj
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-                string q = "INSERT INTO employees(name, position, salary) VALUES(@n,@p,@s)";
+                string q = "INSERT INTO users(user_name, user_email, user_password, user_role, salary) VALUES(@n, @e, @p,@r,@s)";
                 MySqlCommand cmd = new MySqlCommand(q, conn);
 
                 cmd.Parameters.AddWithValue("@n", txtName.Text);
-                cmd.Parameters.AddWithValue("@p", txtPosition.Text);
+                cmd.Parameters.AddWithValue("@e", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@p", txtPassword.Text);
+                cmd.Parameters.AddWithValue("@r", txtPosition.Text);
                 cmd.Parameters.AddWithValue("@s", txtSalary.Text);
 
                 cmd.ExecuteNonQuery();
                 LoadData();
+                logRecord("Added a staff");
             }
         }
 
@@ -110,7 +131,7 @@ namespace Coffee_Shop_CSA_FinalProj
                 using (MySqlConnection conn = new MySqlConnection(connStr))
                 {
                     conn.Open();
-                    string q = "DELETE FROM employees WHERE id=@id";
+                    string q = "DELETE FROM users WHERE id=@id";
                     MySqlCommand cmd = new MySqlCommand(q, conn);
 
                     cmd.Parameters.AddWithValue("@id", id);
