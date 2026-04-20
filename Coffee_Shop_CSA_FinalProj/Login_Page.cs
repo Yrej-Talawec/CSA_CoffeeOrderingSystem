@@ -32,7 +32,6 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // 1. Validation: Ensure no empty fields
             if (string.IsNullOrWhiteSpace(txtBoxEmail.Text) && string.IsNullOrWhiteSpace(txtBoxPassword.Text))
             {
                 MessageBox.Show("Please enter your Email and Password.", "Missing Information",
@@ -55,7 +54,6 @@ namespace Coffee_Shop_CSA_FinalProj
                 return;
             }
 
-            // 2. Extra Validation: Ensure it's a gmail address (matches your DB constraint)
             if (!txtBoxEmail.Text.Trim().ToLower().EndsWith("@gmail.com"))
             {
                 MessageBox.Show("Invalid format. Please use a @gmail.com account.", "Login Error",
@@ -69,14 +67,12 @@ namespace Coffee_Shop_CSA_FinalProj
                 {
                     conn.Open();
 
-                    // 
                     string sql = "SELECT user_id, user_role FROM users WHERE user_email = @email AND user_password = @pass";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@email", txtBoxEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@pass", txtBoxPassword.Text.Trim());
 
-                    // ExecuteScalar gets the 'user_role' (Admin or Barista)
                     MySqlDataReader reader = cmd.ExecuteReader();
 
 
@@ -86,17 +82,14 @@ namespace Coffee_Shop_CSA_FinalProj
                         string userRole = reader["user_role"].ToString();
                         reader.Close();
 
-                        //store current user
                         CurrentUser.UserID = userId;
                         CurrentUser.UserRole = userRole;
 
-                        //updated status in users when user logs in
                         string updatestatusq = "UPDATE users SET status = 'Logged In' WHERE user_id = @id";
                         MySqlCommand updateCmd = new MySqlCommand(updatestatusq, conn);
                         updateCmd.Parameters.AddWithValue("@id", userId);
                         updateCmd.ExecuteNonQuery();
 
-                        //Log record
                         string logQuery = "INSERT INTO logs (CUserID, UAction, ADescription) VALUES (@id, @action, @desc)";
                         MySqlCommand logCmd = new MySqlCommand(logQuery, conn);
 
@@ -106,9 +99,6 @@ namespace Coffee_Shop_CSA_FinalProj
 
                         logCmd.ExecuteNonQuery();
 
-
-
-                        // 4. Role-Based Redirection
                         if (userRole == "Admin")
                         {
                             MessageBox.Show("Welcome, Administrator!", "Admin Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -127,13 +117,10 @@ namespace Coffee_Shop_CSA_FinalProj
                             barista_dash.Show();
                             this.Hide();
                         }
-
-                        // Success! Hide the login screen
                         this.Hide();
                     }
                     else
                     {
-                        // No match found
                         MessageBox.Show("Invalid Email or Password.", "Access Denied",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
