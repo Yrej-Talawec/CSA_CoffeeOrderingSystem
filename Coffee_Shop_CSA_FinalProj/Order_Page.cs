@@ -436,7 +436,7 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void btnClear_Click(object sender, EventArgs e)
         { 
-            DialogResult result = MessageBox.Show("Are you sure you to clear?", "Return to Customer Info",
+            DialogResult result = MessageBox.Show("Are you sure you to clear?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -452,9 +452,20 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void btnReturnCustomerInfo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CustomerInfo customerInfo = new CustomerInfo();
-            customerInfo.Show();
+            DialogResult result = MessageBox.Show("Are you sure you want to return?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Returning to Customer Info...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                CustomerInfo customerInfo = new CustomerInfo();
+                customerInfo.Show();
+            }
+            else
+            {
+
+            }
         }
     }
 }

@@ -92,8 +92,6 @@ namespace Coffee_Shop_CSA_FinalProj
         private void btnCustomerInfoToLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login_Page LoginPage = new Login_Page();
-            LoginPage.Show();
         }
     }
 }
