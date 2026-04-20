@@ -19,7 +19,6 @@ namespace Coffee_Shop_CSA_FinalProj
             cbfilter.DropDownStyle = ComboBoxStyle.DropDownList;
             cbaction.DropDownStyle = ComboBoxStyle.DropDownList;
             tableOptions();
-            dateTimePicker1.ShowCheckBox = true;
             cbaction.Enabled = false;
         }
         string connStr = "server=localhost;port=3306;user id=root;password=*504487*;database=coffee_shop_csa;";
@@ -33,28 +32,28 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void MenuOptions()
         {
-            cbaction.Items.Add("Menu Item Added");
-            cbaction.Items.Add("Menu Item Updated");
-            cbaction.Items.Add("Menu Item Removed");
+            cbaction.Items.Add("Added to Menu");
+            cbaction.Items.Add("Updated Menu Item");
+            cbaction.Items.Add("Removed from Menu");
         }
 
         private void staffOptions()
         {
-            cbaction.Items.Add("Staff Member Added");
-            cbaction.Items.Add("Staff Member Updated");
-            cbaction.Items.Add("Staff Member Removed");
+            cbaction.Items.Add("Added a staff");
+            cbaction.Items.Add("Removed a staff");
+            cbaction.Items.Add("Updated a staff");
         }
 
         private void logOptions()
         {
-            cbaction.Items.Add("User Login");
-            cbaction.Items.Add("User Logout");
+            cbaction.Items.Add("Logged In");
+            cbaction.Items.Add("Logged Off");
             cbaction.Items.Add("Added to Menu");
             cbaction.Items.Add("Updated Menu Item");
             cbaction.Items.Add("Removed from Menu");
-            cbaction.Items.Add("Inserted a staff");
+            cbaction.Items.Add("Added a staff");
             cbaction.Items.Add("Removed a staff");
-            cbaction.Items.Add("Updated a Staff");
+            cbaction.Items.Add("Updated a staff");
         }
 
         private void previousOrderOptions()
@@ -65,7 +64,7 @@ namespace Coffee_Shop_CSA_FinalProj
 
         string selectedfilter = "";
         string selectedaction = "";
-        
+
 
         private void LoadData()
         {
@@ -92,17 +91,6 @@ namespace Coffee_Shop_CSA_FinalProj
                     cmd.Parameters.AddWithValue("@action", cbaction.SelectedItem.ToString());
                 }
 
-                // 🔹 Date filter (optional)
-                if (dateTimePicker1.Checked)
-                {
-                    query += " AND TimeCreated >= @start AND TimeCreated < @end";
-
-                    DateTime start = dateTimePicker1.Value.Date;
-                    DateTime end = start.AddDays(1);
-
-                    cmd.Parameters.AddWithValue("@start", start);
-                    cmd.Parameters.AddWithValue("@end", end);
-                }
 
                 query += " ORDER BY TimeCreated DESC";
 
@@ -149,39 +137,42 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void cbfilter_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (cbfilter.SelectedText == "All Logs")
+            if (cbfilter.SelectedItem == null) return;
+
+            string selected = cbfilter.SelectedItem.ToString();
+
+            cbaction.Enabled = true;
+            cbaction.Items.Clear();
+            cbaction.SelectedItem = null; // reset action
+
+            if (selected == "All Logs")
             {
-                selectedfilter = "All Logs";
-                cbaction.Enabled = true;
-                cbaction.Items.Clear();
                 logOptions();
             }
-            else if (cbfilter.SelectedText == "Edit Menu")
+            else if (selected == "Edit Menu")
             {
-                selectedfilter = "Edit Menu";
-                cbaction.Enabled = true;
-                cbaction.Items.Clear();
                 MenuOptions();
             }
-            else if (cbfilter.SelectedText == "Staff Management")
+            else if (selected == "Staff Management")
             {
-                selectedfilter = "Staff Management";
-                cbaction.Enabled = true;
-                cbaction.Items.Clear();
                 staffOptions();
             }
-            else if (cbfilter.SelectedText == "Previous Orders")
+            else if (selected == "Previous Orders")
             {
-                selectedfilter = "Previous Orders"; 
-                cbaction.Enabled = true;
-                cbaction.Items.Clear();
                 previousOrderOptions();
             }
+
+            LoadData();
         }
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbaction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

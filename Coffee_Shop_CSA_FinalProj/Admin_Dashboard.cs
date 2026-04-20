@@ -36,7 +36,7 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
-            menuedit menuform = new menuedit();
+            Form1 menuform = new Form1();
             menuform.Show();
         }
 

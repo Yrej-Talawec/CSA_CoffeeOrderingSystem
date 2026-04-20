@@ -47,7 +47,7 @@
             // 
             btnstaff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnstaff.Image = Properties.Resources._7;
-            btnstaff.Location = new Point(81, 211);
+            btnstaff.Location = new Point(81, 215);
             btnstaff.Name = "btnstaff";
             btnstaff.Size = new Size(130, 44);
             btnstaff.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             btnreports.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnreports.Image = Properties.Resources._7;
-            btnreports.Location = new Point(81, 282);
+            btnreports.Location = new Point(81, 294);
             btnreports.Name = "btnreports";
             btnreports.Size = new Size(130, 44);
             btnreports.TabIndex = 3;

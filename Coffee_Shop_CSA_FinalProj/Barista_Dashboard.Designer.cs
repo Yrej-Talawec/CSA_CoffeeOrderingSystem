@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Barista_Dashboard));
-            button2 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
             pictureBox1 = new PictureBox();
@@ -40,17 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Image = Properties.Resources._7;
-            button2.Location = new Point(98, 321);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 41);
-            button2.TabIndex = 1;
-            button2.Text = "Past Orders";
-            button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -129,7 +117,6 @@
             ClientSize = new Size(974, 605);
             Controls.Add(label1);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
@@ -144,7 +131,6 @@
         }
 
         #endregion
-        private Button button2;
         private Button button3;
         private DataGridView dataGridView1;
         private PictureBox pictureBox1;

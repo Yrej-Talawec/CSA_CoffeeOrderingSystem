@@ -59,6 +59,8 @@
             label10 = new Label();
             label11 = new Label();
             pictureBox1 = new PictureBox();
+            btnClear = new Button();
+            btnReturnCustomerInfo = new Button();
             ((System.ComponentModel.ISupportInitialize)BeverageQty).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -68,10 +70,9 @@
             cmbBoxBeverage.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxBeverage.Font = new Font("Segoe UI", 12F);
             cmbBoxBeverage.FormattingEnabled = true;
-            cmbBoxBeverage.Location = new Point(97, 81);
-            cmbBoxBeverage.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxBeverage.Location = new Point(111, 108);
             cmbBoxBeverage.Name = "cmbBoxBeverage";
-            cmbBoxBeverage.Size = new Size(240, 29);
+            cmbBoxBeverage.Size = new Size(274, 36);
             cmbBoxBeverage.TabIndex = 0;
             cmbBoxBeverage.SelectedIndexChanged += cmbBoxBeverage_SelectedIndexChanged;
             // 
@@ -81,10 +82,9 @@
             cmbBoxType.Font = new Font("Segoe UI", 12F);
             cmbBoxType.FormattingEnabled = true;
             cmbBoxType.Items.AddRange(new object[] { "[Choose Type]", "Hot", "Cold" });
-            cmbBoxType.Location = new Point(74, 122);
-            cmbBoxType.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxType.Location = new Point(85, 163);
             cmbBoxType.Name = "cmbBoxType";
-            cmbBoxType.Size = new Size(67, 29);
+            cmbBoxType.Size = new Size(76, 36);
             cmbBoxType.TabIndex = 1;
             cmbBoxType.SelectedIndexChanged += cmbBoxType_SelectedIndexChanged;
             // 
@@ -94,9 +94,9 @@
             label1.Font = new Font("Segoe UI", 12F);
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Image = Properties.Resources._8;
-            label1.Location = new Point(14, 84);
+            label1.Location = new Point(12, 111);
             label1.Name = "label1";
-            label1.Size = new Size(77, 21);
+            label1.Size = new Size(96, 28);
             label1.TabIndex = 2;
             label1.Text = "Beverage:";
             // 
@@ -106,9 +106,9 @@
             label2.Font = new Font("Segoe UI", 12F);
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Image = Properties.Resources._8;
-            label2.Location = new Point(14, 175);
+            label2.Location = new Point(16, 233);
             label2.Name = "label2";
-            label2.Size = new Size(41, 21);
+            label2.Size = new Size(51, 28);
             label2.TabIndex = 3;
             label2.Text = "Size:";
             // 
@@ -116,10 +116,9 @@
             // 
             btnAddOrder.BackgroundImage = Properties.Resources._7;
             btnAddOrder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddOrder.Location = new Point(165, 215);
-            btnAddOrder.Margin = new Padding(3, 2, 3, 2);
+            btnAddOrder.Location = new Point(131, 304);
             btnAddOrder.Name = "btnAddOrder";
-            btnAddOrder.Size = new Size(93, 36);
+            btnAddOrder.Size = new Size(106, 38);
             btnAddOrder.TabIndex = 4;
             btnAddOrder.Text = "Add Order";
             btnAddOrder.UseVisualStyleBackColor = true;
@@ -131,10 +130,9 @@
             cmbBoxSize.Font = new Font("Segoe UI", 12F);
             cmbBoxSize.FormattingEnabled = true;
             cmbBoxSize.Items.AddRange(new object[] { "[Choose Size]", "Small", "Medium", "Large" });
-            cmbBoxSize.Location = new Point(74, 172);
-            cmbBoxSize.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxSize.Location = new Point(85, 229);
             cmbBoxSize.Name = "cmbBoxSize";
-            cmbBoxSize.Size = new Size(67, 29);
+            cmbBoxSize.Size = new Size(76, 36);
             cmbBoxSize.TabIndex = 5;
             cmbBoxSize.SelectedIndexChanged += cmbBoxSize_SelectedIndexChanged;
             // 
@@ -144,30 +142,28 @@
             label3.Font = new Font("Segoe UI", 12F);
             label3.ForeColor = SystemColors.ControlLightLight;
             label3.Image = Properties.Resources._8;
-            label3.Location = new Point(14, 127);
+            label3.Location = new Point(16, 169);
             label3.Name = "label3";
-            label3.Size = new Size(45, 21);
+            label3.Size = new Size(57, 28);
             label3.TabIndex = 6;
             label3.Text = "Type:";
             // 
             // BeverageQty
             // 
             BeverageQty.Font = new Font("Segoe UI", 12F);
-            BeverageQty.Location = new Point(290, 124);
-            BeverageQty.Margin = new Padding(3, 2, 3, 2);
+            BeverageQty.Location = new Point(351, 163);
             BeverageQty.Name = "BeverageQty";
-            BeverageQty.Size = new Size(86, 29);
+            BeverageQty.Size = new Size(98, 34);
             BeverageQty.TabIndex = 7;
             BeverageQty.ValueChanged += BeverageQty_ValueChanged;
             // 
             // txtBoxPrice
             // 
             txtBoxPrice.Font = new Font("Segoe UI", 12F);
-            txtBoxPrice.Location = new Point(116, 297);
-            txtBoxPrice.Margin = new Padding(3, 2, 3, 2);
+            txtBoxPrice.Location = new Point(153, 394);
             txtBoxPrice.Name = "txtBoxPrice";
             txtBoxPrice.ReadOnly = true;
-            txtBoxPrice.Size = new Size(90, 29);
+            txtBoxPrice.Size = new Size(102, 34);
             txtBoxPrice.TabIndex = 8;
             txtBoxPrice.Text = "0.00";
             // 
@@ -177,9 +173,9 @@
             label4.Font = new Font("Segoe UI", 12F);
             label4.ForeColor = SystemColors.ControlLightLight;
             label4.Image = Properties.Resources._8;
-            label4.Location = new Point(179, 167);
+            label4.Location = new Point(225, 221);
             label4.Name = "label4";
-            label4.Size = new Size(73, 21);
+            label4.Size = new Size(92, 28);
             label4.TabIndex = 9;
             label4.Text = "Quantity:";
             // 
@@ -189,19 +185,18 @@
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = SystemColors.ControlLightLight;
             label5.Image = Properties.Resources._8;
-            label5.Location = new Point(14, 300);
+            label5.Location = new Point(16, 400);
             label5.Name = "label5";
-            label5.Size = new Size(47, 21);
+            label5.Size = new Size(58, 28);
             label5.TabIndex = 10;
             label5.Text = "Price:";
             // 
             // ListOfOrders
             // 
             ListOfOrders.BackColor = Color.Moccasin;
-            ListOfOrders.Location = new Point(382, 55);
-            ListOfOrders.Margin = new Padding(3, 2, 3, 2);
+            ListOfOrders.Location = new Point(467, 73);
             ListOfOrders.Name = "ListOfOrders";
-            ListOfOrders.Size = new Size(458, 337);
+            ListOfOrders.Size = new Size(493, 448);
             ListOfOrders.TabIndex = 11;
             ListOfOrders.UseCompatibleStateImageBehavior = false;
             // 
@@ -209,10 +204,9 @@
             // 
             btnEdit.Font = new Font("Segoe UI", 12F);
             btnEdit.Image = Properties.Resources._7;
-            btnEdit.Location = new Point(382, 407);
-            btnEdit.Margin = new Padding(3, 2, 3, 2);
+            btnEdit.Location = new Point(437, 543);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(98, 31);
+            btnEdit.Size = new Size(112, 41);
             btnEdit.TabIndex = 12;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
@@ -222,10 +216,9 @@
             // 
             btnRemove.Font = new Font("Segoe UI", 12F);
             btnRemove.Image = Properties.Resources._7;
-            btnRemove.Location = new Point(486, 407);
-            btnRemove.Margin = new Padding(3, 2, 3, 2);
+            btnRemove.Location = new Point(555, 543);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(98, 31);
+            btnRemove.Size = new Size(112, 41);
             btnRemove.TabIndex = 13;
             btnRemove.Text = "Remove";
             btnRemove.UseVisualStyleBackColor = true;
@@ -237,9 +230,9 @@
             label6.Font = new Font("Segoe UI", 12F);
             label6.ForeColor = SystemColors.ControlLightLight;
             label6.Image = Properties.Resources._8;
-            label6.Location = new Point(190, 125);
+            label6.Location = new Point(237, 165);
             label6.Name = "label6";
-            label6.Size = new Size(0, 21);
+            label6.Size = new Size(0, 28);
             label6.TabIndex = 14;
             label6.Click += label6_Click;
             // 
@@ -249,21 +242,19 @@
             cmbBoxSugarLevel.Font = new Font("Segoe UI", 12F);
             cmbBoxSugarLevel.FormattingEnabled = true;
             cmbBoxSugarLevel.Items.AddRange(new object[] { "0%", "25%", "50%", "75%", "100%" });
-            cmbBoxSugarLevel.Location = new Point(279, 167);
-            cmbBoxSugarLevel.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxSugarLevel.Location = new Point(339, 221);
             cmbBoxSugarLevel.Name = "cmbBoxSugarLevel";
-            cmbBoxSugarLevel.Size = new Size(97, 29);
+            cmbBoxSugarLevel.Size = new Size(110, 36);
             cmbBoxSugarLevel.TabIndex = 15;
             cmbBoxSugarLevel.SelectedIndexChanged += cmbBoxSugarLevel_SelectedIndexChanged;
             // 
             // txtBoxTotal
             // 
             txtBoxTotal.Font = new Font("Segoe UI", 12F);
-            txtBoxTotal.Location = new Point(310, 303);
-            txtBoxTotal.Margin = new Padding(3, 2, 3, 2);
+            txtBoxTotal.Location = new Point(386, 402);
             txtBoxTotal.Name = "txtBoxTotal";
             txtBoxTotal.ReadOnly = true;
-            txtBoxTotal.Size = new Size(66, 29);
+            txtBoxTotal.Size = new Size(75, 34);
             txtBoxTotal.TabIndex = 16;
             // 
             // label7
@@ -272,30 +263,28 @@
             label7.Font = new Font("Segoe UI", 12F);
             label7.ForeColor = SystemColors.ControlLightLight;
             label7.Image = Properties.Resources._8;
-            label7.Location = new Point(231, 305);
+            label7.Location = new Point(284, 405);
             label7.Name = "label7";
-            label7.Size = new Size(45, 21);
+            label7.Size = new Size(58, 28);
             label7.TabIndex = 17;
             label7.Text = "Total:";
             // 
             // txtBoxPayment
             // 
             txtBoxPayment.Font = new Font("Segoe UI", 12F);
-            txtBoxPayment.Location = new Point(310, 332);
-            txtBoxPayment.Margin = new Padding(3, 2, 3, 2);
+            txtBoxPayment.Location = new Point(386, 441);
             txtBoxPayment.Name = "txtBoxPayment";
-            txtBoxPayment.Size = new Size(66, 29);
+            txtBoxPayment.Size = new Size(75, 34);
             txtBoxPayment.TabIndex = 18;
             txtBoxPayment.TextChanged += txtBoxPayment_TextChanged;
             // 
             // txtBoxChange
             // 
             txtBoxChange.Font = new Font("Segoe UI", 12F);
-            txtBoxChange.Location = new Point(310, 363);
-            txtBoxChange.Margin = new Padding(3, 2, 3, 2);
+            txtBoxChange.Location = new Point(386, 482);
             txtBoxChange.Name = "txtBoxChange";
             txtBoxChange.ReadOnly = true;
-            txtBoxChange.Size = new Size(66, 29);
+            txtBoxChange.Size = new Size(75, 34);
             txtBoxChange.TabIndex = 19;
             // 
             // label8
@@ -304,9 +293,9 @@
             label8.Font = new Font("Segoe UI", 12F);
             label8.ForeColor = SystemColors.ControlLightLight;
             label8.Image = Properties.Resources._8;
-            label8.Location = new Point(231, 331);
+            label8.Location = new Point(284, 439);
             label8.Name = "label8";
-            label8.Size = new Size(73, 21);
+            label8.Size = new Size(91, 28);
             label8.TabIndex = 20;
             label8.Text = "Payment:";
             // 
@@ -316,9 +305,9 @@
             label9.Font = new Font("Segoe UI", 12F);
             label9.ForeColor = SystemColors.ControlLightLight;
             label9.Image = Properties.Resources._8;
-            label9.Location = new Point(230, 363);
+            label9.Location = new Point(283, 482);
             label9.Name = "label9";
-            label9.Size = new Size(66, 21);
+            label9.Size = new Size(82, 28);
             label9.TabIndex = 21;
             label9.Text = "Change:";
             // 
@@ -326,10 +315,9 @@
             // 
             btnProceed.Font = new Font("Segoe UI", 12F);
             btnProceed.Image = Properties.Resources._7;
-            btnProceed.Location = new Point(725, 407);
-            btnProceed.Margin = new Padding(3, 2, 3, 2);
+            btnProceed.Location = new Point(829, 543);
             btnProceed.Name = "btnProceed";
-            btnProceed.Size = new Size(115, 31);
+            btnProceed.Size = new Size(131, 41);
             btnProceed.TabIndex = 22;
             btnProceed.Text = "Proceed";
             btnProceed.UseVisualStyleBackColor = true;
@@ -339,10 +327,9 @@
             // 
             btnUndo.Font = new Font("Segoe UI", 12F);
             btnUndo.Image = Properties.Resources._7;
-            btnUndo.Location = new Point(590, 407);
-            btnUndo.Margin = new Padding(3, 2, 3, 2);
+            btnUndo.Location = new Point(674, 543);
             btnUndo.Name = "btnUndo";
-            btnUndo.Size = new Size(98, 31);
+            btnUndo.Size = new Size(112, 41);
             btnUndo.TabIndex = 23;
             btnUndo.Text = "Undo";
             btnUndo.UseVisualStyleBackColor = true;
@@ -351,22 +338,20 @@
             // txtBoxDiscount
             // 
             txtBoxDiscount.Font = new Font("Segoe UI", 12F);
-            txtBoxDiscount.Location = new Point(115, 329);
-            txtBoxDiscount.Margin = new Padding(3, 2, 3, 2);
+            txtBoxDiscount.Location = new Point(151, 437);
             txtBoxDiscount.Name = "txtBoxDiscount";
             txtBoxDiscount.ReadOnly = true;
-            txtBoxDiscount.Size = new Size(90, 29);
+            txtBoxDiscount.Size = new Size(102, 34);
             txtBoxDiscount.TabIndex = 24;
             txtBoxDiscount.Text = "0.00";
             // 
             // txtBoxDiscountedPrice
             // 
             txtBoxDiscountedPrice.Font = new Font("Segoe UI", 12F);
-            txtBoxDiscountedPrice.Location = new Point(147, 362);
-            txtBoxDiscountedPrice.Margin = new Padding(3, 2, 3, 2);
+            txtBoxDiscountedPrice.Location = new Point(188, 481);
             txtBoxDiscountedPrice.Name = "txtBoxDiscountedPrice";
             txtBoxDiscountedPrice.ReadOnly = true;
-            txtBoxDiscountedPrice.Size = new Size(66, 29);
+            txtBoxDiscountedPrice.Size = new Size(75, 34);
             txtBoxDiscountedPrice.TabIndex = 25;
             txtBoxDiscountedPrice.Text = "0.00";
             // 
@@ -376,9 +361,9 @@
             labelDiscount.Font = new Font("Segoe UI", 12F);
             labelDiscount.ForeColor = SystemColors.ControlLightLight;
             labelDiscount.Image = Properties.Resources._8;
-            labelDiscount.Location = new Point(13, 331);
+            labelDiscount.Location = new Point(15, 441);
             labelDiscount.Name = "labelDiscount";
-            labelDiscount.Size = new Size(74, 21);
+            labelDiscount.Size = new Size(93, 28);
             labelDiscount.TabIndex = 26;
             labelDiscount.Text = "Discount:";
             // 
@@ -388,9 +373,9 @@
             labelDiscountedPrice.Font = new Font("Segoe UI", 12F);
             labelDiscountedPrice.ForeColor = SystemColors.ControlLightLight;
             labelDiscountedPrice.Image = Properties.Resources._8;
-            labelDiscountedPrice.Location = new Point(12, 363);
+            labelDiscountedPrice.Location = new Point(14, 484);
             labelDiscountedPrice.Name = "labelDiscountedPrice";
-            labelDiscountedPrice.Size = new Size(129, 21);
+            labelDiscountedPrice.Size = new Size(162, 28);
             labelDiscountedPrice.TabIndex = 27;
             labelDiscountedPrice.Text = "Discounted Price:";
             // 
@@ -400,9 +385,9 @@
             label10.Font = new Font("Segoe UI", 12F);
             label10.ForeColor = SystemColors.ControlLightLight;
             label10.Image = Properties.Resources._8;
-            label10.Location = new Point(179, 127);
+            label10.Location = new Point(225, 167);
             label10.Name = "label10";
-            label10.Size = new Size(94, 21);
+            label10.Size = new Size(116, 28);
             label10.TabIndex = 28;
             label10.Text = "Sugar Level:";
             // 
@@ -411,9 +396,9 @@
             label11.AutoSize = true;
             label11.Font = new Font("Times New Roman", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.Image = Properties.Resources._5;
-            label11.Location = new Point(12, 9);
+            label11.Location = new Point(14, 12);
             label11.Name = "label11";
-            label11.Size = new Size(93, 37);
+            label11.Size = new Size(119, 48);
             label11.TabIndex = 30;
             label11.Text = "Order";
             label11.Click += label11_Click;
@@ -423,17 +408,44 @@
             pictureBox1.BackgroundImage = Properties.Resources._5;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Location = new Point(-1, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(853, 50);
+            pictureBox1.Size = new Size(975, 67);
             pictureBox1.TabIndex = 29;
             pictureBox1.TabStop = false;
             // 
+            // btnClear
+            // 
+            btnClear.BackgroundImage = Properties.Resources._7;
+            btnClear.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClear.Location = new Point(302, 304);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(83, 39);
+            btnClear.TabIndex = 31;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnReturnCustomerInfo
+            // 
+            btnReturnCustomerInfo.BackgroundImage = Properties.Resources._7;
+            btnReturnCustomerInfo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReturnCustomerInfo.Location = new Point(25, 544);
+            btnReturnCustomerInfo.Name = "btnReturnCustomerInfo";
+            btnReturnCustomerInfo.Size = new Size(83, 39);
+            btnReturnCustomerInfo.TabIndex = 32;
+            btnReturnCustomerInfo.Text = "Return";
+            btnReturnCustomerInfo.UseVisualStyleBackColor = true;
+            btnReturnCustomerInfo.Click += btnReturnCustomerInfo_Click;
+            // 
             // Order_Page
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._1;
-            ClientSize = new Size(852, 454);
+            ClientSize = new Size(974, 605);
+            Controls.Add(btnReturnCustomerInfo);
+            Controls.Add(btnClear);
             Controls.Add(btnUndo);
             Controls.Add(btnProceed);
             Controls.Add(btnRemove);
@@ -465,7 +477,6 @@
             Controls.Add(label1);
             Controls.Add(cmbBoxType);
             Controls.Add(cmbBoxBeverage);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Order_Page";
             Text = "Order_Page";
             Load += Order_Page_Load;
@@ -508,5 +519,7 @@
         private Label label10;
         private Label label11;
         private PictureBox pictureBox1;
+        private Button btnClear;
+        private Button btnReturnCustomerInfo;
     }
 }

@@ -23,6 +23,8 @@ namespace Coffee_Shop_CSA_FinalProj
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CustomerInfo startorder = new CustomerInfo();
+            startorder.Show();
 
         }
 

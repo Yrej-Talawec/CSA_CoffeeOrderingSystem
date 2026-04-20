@@ -13,7 +13,7 @@ namespace Coffee_Shop_CSA_FinalProj
 {
     public partial class Order_Page : Form
     {
-        string connStr = "server=localhost;user=root;password=coffeeshop;database=coffee_shop_csa;";
+        string connStr = "server=localhost;user=root;password=*504487*;database=coffee_shop_csa;";
 
         string customerName;
         string customerType;
@@ -432,6 +432,29 @@ namespace Coffee_Shop_CSA_FinalProj
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        { 
+            DialogResult result = MessageBox.Show("Are you sure you to clear?", "Return to Customer Info",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Information cleared", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearInputs();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnReturnCustomerInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerInfo customerInfo = new CustomerInfo();
+            customerInfo.Show();
         }
     }
 }

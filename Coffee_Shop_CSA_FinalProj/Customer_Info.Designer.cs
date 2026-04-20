@@ -97,7 +97,7 @@
             btnCustomerInfoToLogin.Name = "btnCustomerInfoToLogin";
             btnCustomerInfoToLogin.Size = new Size(94, 29);
             btnCustomerInfoToLogin.TabIndex = 7;
-            btnCustomerInfoToLogin.Text = "Logout";
+            btnCustomerInfoToLogin.Text = "Return";
             btnCustomerInfoToLogin.UseVisualStyleBackColor = true;
             btnCustomerInfoToLogin.Click += btnCustomerInfoToLogin_Click;
             // 
