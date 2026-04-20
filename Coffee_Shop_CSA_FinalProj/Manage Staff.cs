@@ -31,7 +31,7 @@ namespace Coffee_Shop_CSA_FinalProj
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT * FROM user";
+                string query = "SELECT * FROM users";
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -83,7 +83,7 @@ namespace Coffee_Shop_CSA_FinalProj
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-                string q = "INSERT INTO users(user_name, user_email, user_password, user_role, salary) VALUES(@n, @e, @p,@r,@s)";
+                string q = "INSERT INTO users(user_name, user_email, user_password, user_role, user_salary) VALUES(@n, @e, @p,@r,@s)";
                 MySqlCommand cmd = new MySqlCommand(q, conn);
 
                 cmd.Parameters.AddWithValue("@n", txtName.Text);
@@ -111,9 +111,10 @@ namespace Coffee_Shop_CSA_FinalProj
                     string q = "UPDATE employees SET name=@n, position=@p, salary=@s WHERE id=@id";
                     MySqlCommand cmd = new MySqlCommand(q, conn);
 
-                    cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@n", txtName.Text);
-                    cmd.Parameters.AddWithValue("@p", txtPosition.Text);
+                    cmd.Parameters.AddWithValue("@e", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@p", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("@r", txtPosition.Text);
                     cmd.Parameters.AddWithValue("@s", txtSalary.Text);
 
                     cmd.ExecuteNonQuery();

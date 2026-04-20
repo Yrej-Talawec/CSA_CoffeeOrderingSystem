@@ -83,5 +83,10 @@ namespace Coffee_Shop_CSA_FinalProj
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
