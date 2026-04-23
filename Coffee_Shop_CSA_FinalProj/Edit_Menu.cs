@@ -17,7 +17,8 @@ namespace Coffee_Shop_CSA_FinalProj
         {
             InitializeComponent();
         }
-        string connStr = "server=localhost;port=3306;user id=root;password=coffeeshop;database=coffee_shop_csa;";
+        string connStr = "server=localhost;port=3306;user id=root;password=*504487*" +
+            ";database=coffee_shop_csa;";
         private void ClearFields()
         {
             txtName.Clear();
@@ -34,6 +35,23 @@ namespace Coffee_Shop_CSA_FinalProj
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridViewMenu.DataSource = dt;
+            }
+        }
+
+        private void logRecord(string action)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+                //Log record
+                string logQuery = "INSERT INTO logs (CUserID, UAction, ADescription) VALUES (@id, @action, @desc)";
+                MySqlCommand logCmd = new MySqlCommand(logQuery, conn);
+
+                logCmd.Parameters.AddWithValue("@id", CurrentUser.UserID);
+                logCmd.Parameters.AddWithValue("@action", action);
+                logCmd.Parameters.AddWithValue("@desc", $"{CurrentUser.UserRole} {action}");
+
+                logCmd.ExecuteNonQuery();
             }
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -83,6 +101,7 @@ namespace Coffee_Shop_CSA_FinalProj
                 cmd.ExecuteNonQuery();
                 LoadData();
                 ClearFields();
+                logRecord("Added to Menu");
             }
         }
 
@@ -107,6 +126,7 @@ namespace Coffee_Shop_CSA_FinalProj
                 cmd.ExecuteNonQuery();
                 LoadData();
                 ClearFields();
+                logRecord("Updated Menu Item");
             }
         }
 
@@ -125,6 +145,7 @@ namespace Coffee_Shop_CSA_FinalProj
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
                 LoadData();
+                logRecord("Removed from Menu");
             }
         }
 
@@ -134,7 +155,7 @@ namespace Coffee_Shop_CSA_FinalProj
             {
                 conn.Open();
 
-                string q = "SELECT * FROM beverage_menu WHERE name LIKE @search";
+                string q = "SELECT * FROM menu_items WHERE name LIKE @search";
 
                 if (cmbCategoryFilter.Text != "All")
                 {

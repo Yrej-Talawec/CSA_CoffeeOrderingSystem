@@ -19,6 +19,7 @@ namespace Coffee_Shop_CSA_FinalProj
             InitializeComponent();
         }
         string connStr = "server=localhost;port=3306;user id=root;password=*504487*;database=coffee_shop_csa;";
+        int selectedUserId;
         private void Form1_Load(object sender, EventArgs e)
         {
             using (MySqlConnection conn = new MySqlConnection(connStr))
@@ -108,7 +109,15 @@ namespace Coffee_Shop_CSA_FinalProj
                 using (MySqlConnection conn = new MySqlConnection(connStr))
                 {
                     conn.Open();
-                    string q = "UPDATE employees SET name=@n, position=@p, salary=@s WHERE id=@id";
+
+                    string q = @"UPDATE users 
+                SET user_name = @n, 
+                     user_email = @e, 
+                     user_password = @p, 
+                     user_role = @r, 
+                     user_salary = @s
+                 WHERE user_id = @id";
+
                     MySqlCommand cmd = new MySqlCommand(q, conn);
 
                     cmd.Parameters.AddWithValue("@n", txtName.Text);
@@ -117,8 +126,12 @@ namespace Coffee_Shop_CSA_FinalProj
                     cmd.Parameters.AddWithValue("@r", txtPosition.Text);
                     cmd.Parameters.AddWithValue("@s", txtSalary.Text);
 
+                    cmd.Parameters.AddWithValue("@id", id);
+
                     cmd.ExecuteNonQuery();
+
                     LoadData();
+                    logRecord("Updated a staff");
                 }
             }
         }
@@ -139,6 +152,7 @@ namespace Coffee_Shop_CSA_FinalProj
                     cmd.ExecuteNonQuery();
 
                     LoadData();
+                    logRecord("Removed a staff");
                 }
             }
         }
@@ -148,7 +162,7 @@ namespace Coffee_Shop_CSA_FinalProj
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-                string q = "SELECT * FROM employees WHERE name LIKE @search OR position LIKE @search";
+                string q = "SELECT * FROM users WHERE name LIKE @search OR position LIKE @search";
 
                 MySqlDataAdapter da = new MySqlDataAdapter(q, conn);
                 da.SelectCommand.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
@@ -169,11 +183,15 @@ namespace Coffee_Shop_CSA_FinalProj
         {
             if (e.RowIndex >= 0)
             {
-                var row = dataGridView1.Rows[e.RowIndex];
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-                txtName.Text = row.Cells["name"].Value.ToString();
-                txtPosition.Text = row.Cells["position"].Value.ToString();
-                txtSalary.Text = row.Cells["salary"].Value.ToString();
+                selectedUserId = Convert.ToInt32(row.Cells["user_id"].Value);
+
+                txtName.Text = row.Cells["user_name"].Value.ToString();
+                txtEmail.Text = row.Cells["user_email"].Value.ToString();
+                txtPassword.Text = row.Cells["user_password"].Value.ToString();
+                txtPosition.Text = row.Cells["user_role"].Value.ToString();
+                txtSalary.Text = row.Cells["user_salary"].Value.ToString();
             }
         }
     }
